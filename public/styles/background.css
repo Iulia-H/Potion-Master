@@ -1,0 +1,47 @@
+body{
+     height: 100vh;
+     width: auto;
+     border-width: 1px;
+     border-style: solid;
+     border-color:  black;
+     background-image: url("../assets/witches_hut_night_3_by_anirhapsodist_dcfrp28-fullview.jpg");
+     background-repeat:no-repeat;
+     background-size: cover;
+}
+
+.game-container{
+     height: 600px;
+     width: 500px;
+          border-width: 1px;
+     /* border-style: solid;
+     border-color:  black; */
+     /* display: flex; */
+     
+}
+
+.items-menu{
+     display: inline-grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+     grid-gap: 0.5px ;
+}
+
+.recipe-book{
+     display: flex;
+     flex-direction: column;
+}
+
+.image{
+     height: 50px;
+     width: 50px;
+     padding: 10px;
+}
+
+.potion{
+     height: 50px;
+     width: 50px;
+     padding: 10px;
+}
+p{
+font-size: small;   
+/* display: none;   */
+}

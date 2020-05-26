@@ -32,7 +32,7 @@ items.forEach(ele =>{
     const image = createElement("image", "img", "image", menuList);
     image.setAttribute("src", ele.imageUrl);
     image.setAttribute("alt", `${ele.name}`);
-})
+});
 
 //Pot
 const pot = document.createElement("div");

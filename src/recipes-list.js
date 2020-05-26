@@ -54,4 +54,4 @@ export const recipes = [potion1, potion2, potion3, potion4, potion5, potion6, po
     potion9, potion13, potion17, potion21, potion25, potion29, potion33, potion37, 
     potion10, potion14, potion18, potion22, potion26, potion30, potion34, potion38,
     potion11, potion15, potion19, potion23, potion27, potion31, potion35, potion39,
-    potion12, potion16, potion20, potion24, potion28, potion32, potion36, potion40]
+    potion12, potion16, potion20, potion24, potion28, potion32, potion36, potion40];

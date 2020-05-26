@@ -1,4 +1,4 @@
-console.log("Webpack is working!");
+// console.log("Webpack is working!");
 import {items} from "./item";
 import {recipes} from "./recipes-list";
 import { pots } from "./pot";

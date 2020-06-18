@@ -27,6 +27,24 @@ class RecipeBook {
             
         }
     }
+    checkRecipe(input){
+        // console.log(input);
+        let result = ""
+        recipes.forEach(note => {
+            let found = [];
+            note.recipe.forEach(ingredient=>{
+                found.push(ingredient.name);
+                
+            });
+            // console.log(found);
+
+            if (JSON.stringify(input.sort()) === JSON.stringify(found.sort())){
+                console.log(note.name);
+                result = note.name;
+            }
+        });
+        return result;
+    }
 
 }
 

@@ -21,12 +21,26 @@ const menuList = document.createElement("div");
 menuList.setAttribute("class", "items-menu");
 menuContainer.appendChild(menuList);
 menuList.addEventListener("click", function(event){
-    if (event.target.alt) pots.addItem(event.target.alt);
-    // console.log(pots.ingredients);
+    if (event.target.alt) {
+        let item = event.target.alt;
+        let found = items.find(function(ele) {
+            return ele.name === item;
+        });
+        if (pots.size === pots.ingredients.length){
+            console.log("Too much stuff!")
+        } else{
+            pots.addItem(found);
+            let added = createElement("added", "img", "added", pot);
+            added.setAttribute("src", found.imageUrl);
+            added.setAttribute("alt", `${found.name}`)
+        }
+       
+    };
+        
+        console.log(pots.ingredients);
 });
 
 //Items
-
 
 items.forEach(ele =>{
     const image = createElement("image", "img", "image", menuList);
@@ -38,6 +52,16 @@ items.forEach(ele =>{
 const pot = document.createElement("div");
 pot.setAttribute("class", "pot");
 game.appendChild(pot);
+pots.ingredients.forEach(ele => {
+    
+
+        let added = createElement("added", "div", "added", pot);
+        added.innerHTML = "heey";
+
+    console.log(ele);
+})
+
+
 
 //Recipe Book
 const book = document.createElement("div");
@@ -46,6 +70,8 @@ game.appendChild(book);
 
 recipes.forEach(ele=>{
     const potionContainer = createElement("potion-container", "div", "potion-container", book);
+    potionContainer.setAttribute("id", `${ ele.name }` );
+    potionContainer.hidden = true;
     const potion = createElement("potion", "img", "potion", potionContainer);
     potion.setAttribute("src", `${ele.imageUrl}`);
     potion.setAttribute("alt", `${ele.name}`);
@@ -58,16 +84,33 @@ recipes.forEach(ele=>{
 });
 
 book.addEventListener("click", function (event) {
-//    console.log(event.target);
+   console.log(event.target);
 });
 
 //Button
-const button = createElement("button", "button", "submit-button", pot);
-button.setAttribute("type", "submit");
-button.innerHTML = "Stir stuff";
-button.addEventListener("click", function(event){
-    recipeBook.addRecipe(pots.ingredients);
+const stirButton = createElement("button", "button", "submit-button", pot);
+stirButton.setAttribute("type", "submit");
+stirButton.innerHTML = "Stir stuff";
+stirButton.addEventListener("click", function(event){
+    let names = [];
+    pots.ingredients.forEach(ingredient=>{
+        names.push(ingredient.name);
+    });
+    let found = recipeBook.checkRecipe(names);
+    if (found){
+        console.log(found);
+        let element = document.getElementById(found).hidden = false;
+    }
+
     pots.emptyPot();
+    let ingredients = document.getElementsByClassName("added");
+
+    while (ingredients.length > 0) {
+        ingredients[0].parentNode.removeChild(ingredients[0]);
+
+    }
+
+
 });
 
 const clearButton = createElement("button", "button", "clear-button", pot);
@@ -75,6 +118,11 @@ clearButton.setAttribute("type", "submit");
 clearButton.innerHTML = "Empty pot";
 clearButton.addEventListener("click", function(){
     pots.emptyPot();
+    let ingredients = document.getElementsByClassName("added");
+
+    while (ingredients.length > 0) {
+        ingredients[0].parentNode.removeChild(ingredients[0]);
+    }
 });
 
 

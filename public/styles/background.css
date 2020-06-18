@@ -28,6 +28,13 @@ body{
 .recipe-book{
      display: flex;
      flex-direction: column;
+   
+}
+.potion-container{
+
+}
+.hidden{
+     display: none;
 }
 
 .image{
@@ -45,3 +52,4 @@ p{
 font-size: small;   
 /* display: none;   */
 }
+

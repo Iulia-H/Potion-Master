@@ -1,5 +1,3 @@
-
-
 class Item {
     constructor(name, type, imageUrl) {
         this.name = name;
@@ -8,7 +6,6 @@ class Item {
     }
 
 }
-
 
 const grapes = new Item("Grapes", "fruit", "./public/assets/Ingredients/berrys1.png");
 const cranberries = new Item("Cranberries", "fruit", "./public/assets/Ingredients/berrys2.png");
@@ -50,7 +47,6 @@ const magicPod = new Item("Magic beans", "fruit", "./public/assets/Ingredients/p
 const dragon = new Item("Dragon scales", "animal", "./public/assets/Ingredients/scales.png");
 const  wood = new Item("Treant fingers", "flower", "./public/assets/Ingredients/wood1.png");
 const lumber = new Item("Lumber", "flower", "./public/assets/Ingredients/wood2.png");
-
 
 export const items = [grapes, cranberries, bone, blazingStar, blueHeart, iceButterfly,
      fireButterfly, fireFlower, cotton, ametyst, quartz, roe, feather, daisy, 

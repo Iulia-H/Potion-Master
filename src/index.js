@@ -52,14 +52,12 @@ items.forEach(ele =>{
 const pot = document.createElement("div");
 pot.setAttribute("class", "pot");
 game.appendChild(pot);
-pots.ingredients.forEach(ele => {
-    
+// pots.ingredients.forEach(ele => {
+//         let added = createElement("added", "div", "added", pot);
+//         added.innerHTML = "heey";
 
-        let added = createElement("added", "div", "added", pot);
-        added.innerHTML = "heey";
-
-    console.log(ele);
-})
+//     console.log(ele);
+// })
 
 
 
@@ -99,7 +97,7 @@ stirButton.addEventListener("click", function(event){
     let found = recipeBook.checkRecipe(names);
     if (found){
         console.log(found);
-        let element = document.getElementById(found).hidden = false;
+        document.getElementById(found).hidden = false;
     }
 
     pots.emptyPot();

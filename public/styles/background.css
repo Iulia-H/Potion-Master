@@ -18,7 +18,7 @@ body{
      /* border-style: solid;
      border-color:  black; */
      display: flex;
-     justify-content: space-between;
+     flex-direction: row;
      
 }
 .items-menu-container{
@@ -38,6 +38,7 @@ body{
      grid-auto-columns: 1fr;
      /* padding-bottom: 1px; */
      /* grid-gap: 0.1px ; */
+     padding-right: 267px;
 }
 
 .recipe-book{
@@ -45,8 +46,16 @@ body{
      flex-direction: column;
 }
 
-.potion-container{
-
+.pot-container{
+     /* align-items: center; */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     /* bottom: 50 */
+}
+.pot{
+     
+     
 }
 .hidden{
      display: none;

@@ -49,9 +49,13 @@ items.forEach(ele =>{
 });
 
 //Pot
+const potContainer = createElement("pot-containter", "div", "pot-container", game);
+
+
 const pot = document.createElement("div");
 pot.setAttribute("class", "pot");
-game.appendChild(pot);
+
+potContainer.appendChild(pot);
 // pots.ingredients.forEach(ele => {
 //         let added = createElement("added", "div", "added", pot);
 //         added.innerHTML = "heey";
@@ -86,7 +90,7 @@ book.addEventListener("click", function (event) {
 });
 
 //Button
-const stirButton = createElement("button", "button", "submit-button", pot);
+const stirButton = createElement("button", "button", "submit-button", potContainer);
 stirButton.setAttribute("type", "submit");
 stirButton.innerHTML = "Stir stuff";
 stirButton.addEventListener("click", function(event){
@@ -111,7 +115,7 @@ stirButton.addEventListener("click", function(event){
 
 });
 
-const clearButton = createElement("button", "button", "clear-button", pot);
+const clearButton = createElement("button", "button", "clear-button", potContainer);
 clearButton.setAttribute("type", "submit");
 clearButton.innerHTML = "Empty pot";
 clearButton.addEventListener("click", function(){

@@ -73,7 +73,7 @@ game.appendChild(book);
 recipes.forEach(ele=>{
     const potionContainer = createElement("potion-container", "div", "potion-container", book);
     potionContainer.setAttribute("id", `${ ele.name }` );
-    potionContainer.hidden = true;
+    // potionContainer.hidden = true;
     const potion = createElement("potion", "img", "potion", potionContainer);
     potion.setAttribute("src", `${ele.imageUrl}`);
     potion.setAttribute("alt", `${ele.name}`);

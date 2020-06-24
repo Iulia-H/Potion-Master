@@ -12,14 +12,13 @@ body{
      background-repeat:no-repeat;
      background-size: cover;
      background-image: url("../../public/assets/witches_hut_night_3_by_anirhapsodist_dcfrp28-fullview.jpg");
-     height: 750px;
-     width: 1500px;
+     height: 90%;
+     width: 80%;
      border-width: 1px;
      /* border-style: solid;
      border-color:  black; */
      display: flex;
-     flex-direction: row;
-     
+     flex-direction: row;     
 }
 .items-menu-container{
      padding-left: 15px;
@@ -38,12 +37,16 @@ body{
      grid-auto-columns: 1fr;
      /* padding-bottom: 1px; */
      /* grid-gap: 0.1px ; */
-     padding-right: 267px;
+     /* padding-right: 267px; */
 }
 
 .recipe-book{
-     display: flex;
-     flex-direction: column;
+     /* padding-left: 300px; */
+     display: inline-grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+     grid-auto-rows: 1fr;
+     grid-auto-columns: 1fr;
+  
 }
 
 .pot-container{
@@ -54,12 +57,23 @@ body{
      /* bottom: 50 */
 }
 .pot{
-     
-     
+     /* height: 200px;
+     width:65px; */
+     border: 2px, black;
+     display: flex;
+     flex-direction: column; 
+     justify-content: center;
+}
+
+.pot img{
+     height: 50px;
+     width: 50px;
+
 }
 .hidden{
      display: none;
 }
+
 
 .image{
      height: 50px;

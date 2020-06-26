@@ -11,6 +11,52 @@ game.setAttribute("class", "game-container");
 
 document.body.appendChild(game);
 
+//Recipe Book
+const bookContainer = document.createElement("div");
+bookContainer.setAttribute("class", "recipe-book-container");
+game.appendChild(bookContainer);
+
+const book = document.createElement("div");
+book.setAttribute("class", "recipe-book");
+bookContainer.appendChild(book);
+
+recipes.forEach(ele => {
+    const potionContainer = createElement("potion-container", "div", "potion-container", book);
+    potionContainer.setAttribute("id", `${ele.name}`);
+    // potionContainer.hidden = true;
+    const potion = createElement("potion", "img", "potion", potionContainer);
+    potion.setAttribute("src", `${ele.imageUrl}`);
+    potion.setAttribute("alt", `${ele.name}`);
+    const ingredients = createElement("ingredients", "div", "ingredients", potionContainer);
+    ele.recipe.forEach(el => {
+        const ingredient = createElement("ingredient", "img", "ingredient", ingredients);
+        ingredient.setAttribute("src", `${el.imageUrl}`);
+
+    });
+});
+
+book.addEventListener("click", function (event) {
+    console.log(event.target);
+});
+
+
+//Pot
+const potContainer = createElement("pot-containter", "div", "pot-container", game);
+
+
+const pot = document.createElement("div");
+pot.setAttribute("class", "pot");
+
+potContainer.appendChild(pot);
+// pots.ingredients.forEach(ele => {
+//         let added = createElement("added", "div", "added", pot);
+//         added.innerHTML = "heey";
+
+//     console.log(ele);
+// })
+
+
+
 //Items menu-container
 const menuContainer =  document.createElement("div");
 menuContainer.setAttribute("class", "items-menu-container");
@@ -48,46 +94,11 @@ items.forEach(ele =>{
     image.setAttribute("alt", `${ele.name}`);
 });
 
-//Pot
-const potContainer = createElement("pot-containter", "div", "pot-container", game);
-
-
-const pot = document.createElement("div");
-pot.setAttribute("class", "pot");
-
-potContainer.appendChild(pot);
-// pots.ingredients.forEach(ele => {
-//         let added = createElement("added", "div", "added", pot);
-//         added.innerHTML = "heey";
-
-//     console.log(ele);
-// })
 
 
 
-//Recipe Book
-const book = document.createElement("div");
-book.setAttribute("class", "recipe-book");
-game.appendChild(book);
 
-recipes.forEach(ele=>{
-    const potionContainer = createElement("potion-container", "div", "potion-container", book);
-    potionContainer.setAttribute("id", `${ ele.name }` );
-    // potionContainer.hidden = true;
-    const potion = createElement("potion", "img", "potion", potionContainer);
-    potion.setAttribute("src", `${ele.imageUrl}`);
-    potion.setAttribute("alt", `${ele.name}`);
-    const ingredients = createElement("ingredients", "div", "ingredients", potionContainer);
-    ele.recipe.forEach(el=>{
-        const ingredient = createElement("ingredient", "img", "ingredient", ingredients);
-        ingredient.setAttribute("src", `${el.imageUrl}`);
 
-    });
-});
-
-book.addEventListener("click", function (event) {
-   console.log(event.target);
-});
 
 //Button
 const stirButton = createElement("button", "button", "submit-button", potContainer);

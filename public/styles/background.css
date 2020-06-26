@@ -8,52 +8,71 @@ body{
      justify-content: center;
 }
 
+/* <span>Photo by <a href="https://unsplash.com/@jjbart7?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Joshua Bartell</a> on <a href="/s/photos/wood-texture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
+
 .game-container{
+     box-sizing: border-box;
+     background-image: url("../../public/assets/witches_hut_night_3_by_anirhapsodist_dcfrp28-fullview.jpg");
      background-repeat:no-repeat;
      background-size: cover;
-     background-image: url("../../public/assets/witches_hut_night_3_by_anirhapsodist_dcfrp28-fullview.jpg");
      height: 90%;
      width: 80%;
      border-width: 1px;
-     /* border-style: solid;
-     border-color:  black; */
      display: flex;
-     flex-direction: row;     
+     position: relative;
      
 }
 .items-menu-container{
-     padding-left: 1%;
+     margin-top: 30px;
+     box-sizing: border-box;
+     height: 90%;
+     width: 35%;
      display: flex;
-     padding-top: 2%;
-     padding-bottom: 1%;
-     
-     /* justify-content: flex-end; */
+     background-image: url("../../public/assets/iuliashelfback.png");
+     background-repeat:no-repeat;
+     background-size: contain;
+
 }
 
 .items-menu{
-
+     margin: 10%;
+     margin-bottom: 15%;
+     box-sizing: border-box;
      display: inline-grid;
-     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
      grid-auto-rows: 1fr;
      grid-auto-columns: 1fr;
      overflow-y: auto
-     /* padding-bottom: 1px; */
-     /* grid-gap: 0.1px ; */
-     /* padding-right: 267px; */
+}
+
+.recipe-book-container{
+
+     box-sizing: border-box;
+     height: 100%;
+     width: 35%;
+     background-repeat: no-repeat;
+     background-size: contain;
+     
+     /* padding-left: 300px; */
 }
 
 .recipe-book{
+     margin-top: 70px;
+     box-sizing: border-box;
+     height: 700px;
+     width: 400px;
+    
+     background-repeat:no-repeat;
+     background-size: contain;
+     
      /* padding-left: 300px; */
-     /* display: inline-grid;
-     grid-template-columns: 1fr;
-     grid-auto-rows: 1fr;
-     grid-auto-columns: 1fr; */
      overflow-y: auto;
-     -webkit-overflow-scrolling: touch;
-  
 }
 
 .pot-container{
+     box-sizing: border-box;
+     height: 100%;
+     width: 30%;
      /* align-items: center; */
      display: flex;
      flex-direction: column;
@@ -82,7 +101,9 @@ body{
 .image{
      height: 50px;
      width: 50px;
-     padding-left: 15px;
+     padding-left: 10px;
+     padding-right: 10px;
+     border-bottom: 10px solid black;
 }
 
 .potion{

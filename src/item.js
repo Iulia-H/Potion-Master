@@ -1,4 +1,4 @@
-class Item {
+ class Item {
     constructor(name, type, imageUrl) {
         this.name = name;
         this.type = type;
@@ -48,8 +48,12 @@ const dragon = new Item("Dragon scales", "animal", "./public/assets/Ingredients/
 const  wood = new Item("Treant fingers", "flower", "./public/assets/Ingredients/wood1.png");
 const lumber = new Item("Lumber", "flower", "./public/assets/Ingredients/wood2.png");
 
-export const items = [grapes, cranberries, bone, blazingStar, blueHeart, iceButterfly,
-     fireButterfly, fireFlower, cotton, ametyst, quartz, roe, feather, daisy, 
-    rose, redAester, tulip, iris, trailing, lilly, wheat, mint, nettle, black,
-    hawthorn, raspberry,magic, maple, ivy, rosebud, helly, fern, por, rosy, amanita,
-    blue, magicPod, dragon, wood, lumber ];
+export const items = [
+    bone, cotton, daisy, lilly, amanita, //0-4
+    feather, iris, wheat, raspberry, rosy, //5-9
+    fireButterfly, fireFlower, roe, maple, ivy, //10-14
+    rosebud, trailing, redAester, rose, cranberries, //15-19
+    mint, magicPod, nettle, fern, hawthorn, //20-24
+    helly, black, blueHeart, quartz, magic, //25-29
+    iceButterfly, dragon, blue, tulip, grapes, //30-34
+    blazingStar,  ametyst, por, wood, lumber ]; //35 -39

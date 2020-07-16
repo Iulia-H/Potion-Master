@@ -103,7 +103,7 @@ items.forEach(ele =>{
 //Button
 const stirButton = createElement("button", "button", "submit-button", potContainer);
 stirButton.setAttribute("type", "submit");
-stirButton.innerHTML = "Stir stuff";
+stirButton.innerHTML = "Stir the pot";
 stirButton.addEventListener("click", function(event){
     let names = [];
     pots.ingredients.forEach(ingredient=>{

@@ -23,7 +23,7 @@ bookContainer.appendChild(book);
 recipes.forEach(ele => {
     const potionContainer = createElement("potion-container", "div", "potion-container", book);
     potionContainer.setAttribute("id", `${ele.name}`);
-    // potionContainer.hidden = true;
+    potionContainer.hidden = true;
     const potion = createElement("potion", "img", "potion", potionContainer);
     potion.setAttribute("src", `${ele.imageUrl}`);
     potion.setAttribute("alt", `${ele.name}`);
@@ -73,12 +73,12 @@ menuList.addEventListener("click", function(event){
             return ele.name === item;
         });
         if (pots.size === pots.ingredients.length){
-            console.log("Too much stuff!")
+            console.log("Too much stuff!");
         } else{
             pots.addItem(found);
             let added = createElement("added", "img", "added", pot);
             added.setAttribute("src", found.imageUrl);
-            added.setAttribute("alt", `${found.name}`)
+            added.setAttribute("alt", `${found.name}`);
         }
        
     };

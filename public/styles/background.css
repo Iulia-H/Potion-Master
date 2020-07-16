@@ -47,21 +47,23 @@ body{
 }
 
 .recipe-book-container{
-     /* margin-top: 70px; */
      box-sizing: border-box;
      height: 100%;
      width: 25%;
      background-repeat: no-repeat;
      background-size: 100% 100%;
-     /* background-size: contain; */
-     background-image: url("../../public/assets/iuliascroll1.png");
-     /* padding-left: 300px; */
+     background-image: url("../../public/assets/iuliascroll2.png");
 }
 
 .recipe-book{
+     border-top: 2px solid black;
+     border-bottom: 2px solid black;
+     margin-top: 87px;
+     margin-left: 70px;
+     /* margin-bottom: 30px; */
      box-sizing: border-box;
-     height: 700px;
-     width: 400px;
+     height: 570px;
+     width: 202px;
      background-repeat:no-repeat;
      background-size: contain;
      overflow-y: auto;
@@ -79,9 +81,10 @@ body{
 }
 
 .pot{
-     /* height: 200px;
-     width:65px; */
-     border: 2px, black;
+     margin-left: 150px;
+     height: 200px;
+     width:65px;
+     border: 2px solid black;
      display: flex;
      flex-direction: column; 
      justify-content: center;
@@ -102,16 +105,45 @@ body{
      width: 50px;
      padding-left: 10px;
      padding-right: 10px;
-     border-bottom: 10px solid black;
+     border-bottom: 10px solid rgb(105, 83, 22);
 }
 
 .potion{
      height: 50px;
      width: 50px;
      padding: 10px;
+     
 }
+.potion-container{
+     margin-top: 20px; 
+     box-sizing: border-box;
+     border-bottom: 3px solid rgb(78, 54, 21);
+}
+
 p{
 font-size: small;   
 /* display: none;   */
+}
+
+.ingredients{
+     box-sizing: border-box;
+     margin-left: 15px;
+     display: flex;
+     flex-direction: row;
+     align-items: space-between;
+}
+
+.ingredient{
+     margin: 5px;
+}
+.submit-button{
+     margin-left: 135px;
+     width: 100px;
+     /* margin-top: 365px; */
+}
+.clear-button{
+     margin-top: 10px;
+     width: 100px;
+     margin-left: 135px;
 }
 

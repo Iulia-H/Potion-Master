@@ -138,7 +138,16 @@ clearButton.addEventListener("click", function(){
     }
 });
 
+const instructions = createElement("instr", "div", "instr", game);
+const paragraph = createElement("par", "div", "par", instructions);
 
+paragraph.innerHTML = "Please press me if you want to play";
+
+const inButton = createElement("button", "button", "in-button", instructions);
+inButton.innerHTML = "Play";
+inButton.addEventListener("click", function(){
+    instructions.hidden = true;
+})
 
 //Creator Function
 function createElement(name, elm, att, parent) {
@@ -147,4 +156,6 @@ function createElement(name, elm, att, parent) {
     parent.appendChild(name);
     return name;
 }
+
+
 

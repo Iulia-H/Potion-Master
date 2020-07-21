@@ -111,8 +111,23 @@ stirButton.addEventListener("click", function(event){
     });
     let found = recipeBook.checkRecipe(names);
     if (found){
-        console.log(found);
         document.getElementById(found).hidden = false;
+    }else{
+        const errorDiv = createElement("err", "div", "err", game);
+        const reminder = createElement("rem", "div", "rem", errorDiv);
+
+        reminder.innerHTML = "That is not a potion!" + "<br />" + "Please remember that: "
+            + "<br />" + "* Ingredients that mix successfully are never stored on the same shelf or on consequequent shelves."
+            + "<br />" + "* One potion's ingredients are also not stored vertically above each other."
+            + "<br />" + "Good luck!";
+
+        const againButton = createElement("button", "button", "a-button", errorDiv);
+        againButton.innerHTML = "Resume game";
+        againButton.addEventListener("click", function () {
+            errorDiv.hidden = true;
+        })
+
+
     }
 
     pots.emptyPot();
@@ -141,7 +156,10 @@ clearButton.addEventListener("click", function(){
 const instructions = createElement("instr", "div", "instr", game);
 const paragraph = createElement("par", "div", "par", instructions);
 
-paragraph.innerHTML = "Please press me if you want to play";
+paragraph.innerHTML = "Welcome to potion mater!" + "<br />" + "You have 40 mystery potions that can be obtained by mixing different ingredients." 
+    + "<br />" + "Ingredients that mix successfully are never stored on the same shelf or on consequequent shelves." 
+    + "<br />" + "One potion's ingredients are also not stored vertically above each other." + "<br />" + "Try to see how many you can create" 
+    + "<br />" + "Good luck!" ;
 
 const inButton = createElement("button", "button", "in-button", instructions);
 inButton.innerHTML = "Play";

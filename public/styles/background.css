@@ -168,6 +168,7 @@ font-size: small;
      background-color: rgba(0, 0, 0, .7);
 }
 .in-button{
+     margin-top: 10px;
      margin-left:650px;
      width: 100px;
 }
@@ -184,3 +185,29 @@ font-size: small;
      border: 3px solid rgb(78, 54, 21);
 }
 
+
+.err{
+     position: absolute;
+     height: 700px;
+     width: 1350px;
+     /* background-color: gray; */
+     /* opacity: 0.5; */
+     background-color: rgba(0, 0, 0, .7);
+}
+.a-button{
+     margin-top: 10px;
+     margin-left:650px;
+     width: 100px;
+}
+
+.rem{
+     box-sizing: border-box;
+     padding: 15px;
+     background-color: rgb(0, 0, 0);
+     color:rgb(255, 251, 251);
+     margin-left:500px;
+     margin-top:200px;
+     width:400px;
+     height: 200px;
+     border: 3px solid rgb(78, 54, 21);
+}

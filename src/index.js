@@ -118,8 +118,7 @@ stirButton.addEventListener("click", function(event){
 
         reminder.innerHTML = "That is not a potion!" + "<br />" + "Please remember that: "
             + "<br />" + "* Ingredients that mix successfully are never stored on the same shelf or on consequequent shelves."
-            + "<br />" + "* One potion's ingredients are also not stored vertically above each other."
-            + "<br />" + "Good luck!";
+            + "<br />" + "* One potion's ingredients are also not stored vertically above each other.";
 
         const againButton = createElement("button", "button", "a-button", errorDiv);
         againButton.innerHTML = "Resume game";
